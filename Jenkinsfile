@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Clone') {
             steps {
-                git 'https://github.com/avinash943/Hello-World.git'
+                echo 'Cloning repository...'
             }
         }
 
@@ -14,7 +14,7 @@ pipeline {
             }
         }
 
-        stage('Run Fibonacci App') {
+        stage('Run Fibonacci') {
             steps {
                 sh 'echo 10 | docker run -i fibonacci-app'
             }
